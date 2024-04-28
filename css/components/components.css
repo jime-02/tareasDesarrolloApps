@@ -1,0 +1,170 @@
+.container {
+    text-align: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    display: inline-block;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+
+/* ********************* */
+.box.box1 {
+    background-color: purple;
+}
+
+.box.box2 {
+    background-color: skyblue;
+}
+
+.box.box3 {
+    background-color: pink; 
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 15%;
+    }
+}
+
+
+/******** SEGUNDO HTML EN HILERA ******************/
+.container2{
+    display: grid;
+    grid-template-columns: 100px 100px 100px; 
+    grid-template-rows: 100px 100px 100px; 
+    gap: 10px; /* espacio entre hileras */
+}
+
+.box-two{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+}
+
+.box-two.box1 {
+    background-color: purple;
+    grid-column: 1; /* cuadro 2 columna */
+    grid-row: 1; /* cuadro 1 fila */
+}
+
+.box-two.box2 {
+    background-color: skyblue;
+    grid-column: 2; /* cuadro 2 columna */
+    grid-row: 2; /* cuadro 2 fila */
+}
+
+.box-two.box3 {
+    background-color: pink; 
+    grid-column: 3; /* cuadro en tercer colum */
+    grid-row: 3; /* cuadro en 3 fila */
+}
+
+/****** CUADROS ANIMADOS***********/
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.box-animate{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    margin-bottom: 10px;
+    transition-duration: 1s;  
+}
+
+.box-animate.box1{
+    background-color: purple;
+}
+
+.box-animate.box1:hover{
+    transform: scaleX(3.5);
+    transform-origin: left;
+}
+
+.box-animate.box2{
+    background-color: skyblue;
+}
+
+.box-animate.box2:hover{
+    transform: translateX(100px);
+}
+
+.box-animate.box3{
+    background-color: pink; 
+}
+
+.box-animate.box3:hover{
+    background-color: green; 
+}
+
+/**********AJUSTAR AL ANCHO DE LA PANTALLA*****************/
+.container4{
+    text-align: center;
+}
+
+.box-width{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    display: inline-block;
+    margin-right: 1%;
+    box-sizing: border-box;
+}
+
+.box-width.box1 {
+    background-color: purple;
+}
+
+.box-width.box2 {
+    background-color: skyblue;
+}
+
+.box-width.box3 {
+    background-color: pink; 
+}
+
+@media (max-width: 450px) {  
+    .box-width{
+        width: 100%; 
+    }
+}
+
+
+/*********SALTO A LA SIGUIENTE LINEA***********/
+.container5{
+    text-align: center;
+}
+
+.box-jump{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    display: inline-block;
+    margin-right: 1%;
+    box-sizing: border-box;
+}
+
+.box-jump.box1 {
+    background-color: purple;
+}
+
+.box-jump.box2 {
+    background-color: skyblue;
+}
+
+.box-jump.box3 {
+    background-color: pink; 
+}
+
+@media (max-width: 333px) {  
+    .container5{
+        flex-direction: column;
+        text-align: left;
+    }
+}
